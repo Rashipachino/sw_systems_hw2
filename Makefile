@@ -1,7 +1,7 @@
 CC = gcc
 FLAGS = -Wall -g
 AR = ar
-OBJFILES = main.o my_mat.o
+OBJECTS = main.o my_mat.o
 
 all: connections
 connections: $(OBJFILES)
