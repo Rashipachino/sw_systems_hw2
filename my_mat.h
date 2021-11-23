@@ -2,7 +2,8 @@
     #define MY_MAT_H
     #define N 10
 
-    void optionA(int a[N][N]);
-    void optionB(int mat[N][N]);
-    void optionC(int mat[N][N]);
+    void optionA(int[N][N]);
+    void optionB(int[N][N]);
+    int optionBHelper(int[N][N], int, int);
+    void optionC(int[N][N]);
 #endif
