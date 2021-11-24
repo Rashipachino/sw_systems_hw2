@@ -1,46 +1,27 @@
 #include <stdio.h>
-#includ <stdlib.h>
+#include <string.h>
 #include "my_mat.h"
 
 #define N 10
 
 int main() {
-    enum option { A, B, C, D};
+//    int mat[N][N];
+    char chosen_option;
+    scanf("%c", &chosen_option);
 
-    enum option chosen_option;
-
-    int mat[N][N];
-
-    /* asks user to choose an option*/
-    printf("Please choose which function you'd like to activate: A. function 1, B. function 2, C. function 3, D. exit ");
-    scanf("%d", &chosen_option);
-
-    while(chosen_option != null) {
-        /*activate the correct function*/
-        switch (chosen_option) {
-            case A:
-                printf("You have chosen function 1!");
-                optionA(mat);
-                break;
-
-            case B:
-                printf("You have chosen function 2!");
-                optionB(mat);
-                break;
-
-            case C:
-                printf("You have chosen function 3!");
-                optionC(mat);
-                break;
-
-            case D:
-                printf("You've chosen to exit the program!");
-                break;
+    while (chosen_option != 'D') {
+        if(chosen_option == 'A'){
+            optionA(mat);
         }
-
-        printf("Please enter the next function you'd like to activate: A. function 1, B. function 2, C. function 3, D. exit");
-        scanf("%d", &chosen_option);
+        else if(chosen_option == 'B') {
+            optionB(mat);
+        }
+        else if(chosen_option == 'C'){
+            optionC(mat);
+        }
+        scanf("%c", &chosen_option);
     }
-    }
-
+    return 0;
 }
+
+
