@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "my_mat.h"
 
 #define N 10
@@ -23,5 +22,3 @@ int main() {
     }
     return 0;
 }
-
-
