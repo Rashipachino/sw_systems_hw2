@@ -3,12 +3,6 @@
 
 #define N 10
 
-int main() {
-    int arr[N][N];
-    optionA(arr);
-    optionB(arr);
-}
-
 void optionA(int mat[N][N]) {
     for(int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -22,10 +16,10 @@ void optionB(int mat[N][N]) {
     scanf("%d %d", &a, &b);
     int been_there[N] = {0};
     if(optionBHelper(mat, a, b, been_there)) {
-        printf("True");
+        printf("True\n");
     }
     else {
-        printf("False");
+        printf("False\n");
     }
 }
 
@@ -35,8 +29,8 @@ int optionBHelper(int mat[N][N], int a, int b, int been_there[N]) {
     }
     been_there[a] = 1;
     for (int i = 0; i < N; i++) {
-        if(mat[a][i] && been_there[i] == 0 && optionBHelper(mat, i, b, been_there)) {
-            return 1;
+        if(mat[a][i] && been_there[i] == 0) {
+            return optionBHelper(mat, i, b, been_there);
         }
     }
     return 0;
