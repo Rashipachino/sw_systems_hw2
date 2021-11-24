@@ -1,4 +1,7 @@
 # sw_systems_hw2
+Creators: 
+Rashi Pachino 345174478
+Noah Weiss 326876786
 In this assignment we were tasked with creating 3 functions. 
 The program continues to ask for commands in a while loop until the command is to exit the program.
 After receiving the command 'A', the main directs us to the first function which receives input values and puts the numbers into a matrix.
